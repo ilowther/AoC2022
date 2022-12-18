@@ -81,8 +81,8 @@ for m in range(20):
   for n in range(len(mon)):
     mon[n].inspect_count += len(mon[n].items)
     while len(mon[n].items) > 0:
-#      new = mon[n].op(mon[n].items[0])%lcm
-      new =int(np.floor(mon[n].op(mon[n].items[0])/3))
+      new = mon[n].op(mon[n].items[0])%lcm
+#      new =int(np.floor(mon[n].op(mon[n].items[0])/3))
       if new%mon[n].div == 0:
         mon[mon[n].true].items.append(new)
       else:
